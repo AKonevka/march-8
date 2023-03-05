@@ -28,11 +28,33 @@ img {
 }
 
 .wrapper {
+
+    position: relative;
     min-height: 100%;
-    background: linear-gradient(140deg, rgb(231, 245, 255), rgb(251, 200, 255));
-    animation: bg-color 5s infinite linear;
+    box-shadow: 0 -200px 100px -120px rgb(251, 200, 255) inset;
+    background: rgb(231, 245, 255);
+    animation: bg-color-shadow 5s infinite linear alternate;
 
 }
+.patterns{
+position: absolute;
+width: 306px;
+height: 100px
+}
+
+.patterns2{
+
+    right: 0%;
+    top: 88%;
+    transform: scale(-1, -1)
+}
+
+@keyframes bg-color-shadow {
+    50% {
+      background: rgb(198, 232, 255);
+      box-shadow: 0 -200px 100px -100px rgb(250, 184, 255) inset;
+    }
+  }
 
 @keyframes bg-color {
     100% {
@@ -87,6 +109,7 @@ h6 {
 
 .text {
     color: #b40e0e;
+    position: relative;
 }
 
 
@@ -128,3 +151,14 @@ h6 {
     }
 
 }
+
+.text__flower{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: -29%;
+    top: 82%;
+    animation: rotate-l 60s infinite linear;
+}
+
+
